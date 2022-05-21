@@ -63,7 +63,7 @@ const stats = {
     label: 'My First dataset',
     backgroundColor: 'rgb(255, 99, 132)',
     borderColor: 'rgb(255, 99, 132)',
-    data: converData,
+    data:datasets ,
   }]
 };
 const ctx = document.getElementById('myChart').getContext('2d');
@@ -72,8 +72,8 @@ const myChart = new Chart(ctx, {
     data: {
         labels: ['PS', 'Ataque', 'Defensa', 'Ataque esp.', 'Defensa esp.', 'velocidad'],
         datasets: [{
-            label: '-',
-            data:[ ],
+            label: '',
+            data:[ 1, 2],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',

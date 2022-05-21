@@ -1,6 +1,6 @@
-const inputVal = document.getElementById('personaje')
+const inputVal = document.getElementById('card-img').value
 
-const btnAgregar = document.querySelector('#clicky')
+const btnAgregar = document.querySelector('#agregar')
 
 
 console.log(inputVal)
@@ -20,8 +20,7 @@ btnAgregar.addEventListener('click', () => {
 const getCharacterName = async () => {
 
   const input = document.getElementById('personaje').value
-/* 
-  const url = ` https://pokeapi.co/api/v2/pokemon/${input}` */
+  const url = "https://pokeapi.co/api/v2/pokemon/"
   const getData = await fetch(url)
 
   const data = await getData.json()
@@ -51,13 +50,13 @@ const validateInput = () => {
 
 function renderElemento() {
   const lista = document.getElementById('lista-nombres')
-  lista.innerHTML = ''
-  arr.forEach(function (item, i) {
+  lista.innerHTML = '',
+  arr.forEach(function (name, i) {
     lista.innerHTML += `
       <li>
-        ${item}
+        ${name}
         <button onclick="borrarElemento(${i})" >X</button>
-        <button onclick="editar(${i})" >editar</button>
+
       </li>
     `
   })
