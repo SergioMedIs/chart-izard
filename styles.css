@@ -1,0 +1,94 @@
+.graph {
+    width: 500px;
+    height: 450px;
+}
+body{
+    background-color: rgb(78, 88, 85);
+    margin: 0px ;
+}
+.card-body{
+    margin-top: 150px;
+    margin-left: 45px;
+   background-repeat: no-repeat;
+   background-size: 2050px 420px ;
+   background-position: center;
+   border-radius:120px ;
+   border-style: hidden;
+   
+}
+.search{
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+}
+.card-body-img{
+    grid-row-start:1;
+    grid-column: 1;
+
+    border:15px;
+    border-color: white;
+    border-style:solid;
+    margin: 16px;
+    padding: 15px;
+    background: radial-gradient(#f5f4f4, #aaaaaa);
+    border-radius: 5px;
+
+}
+
+.name{
+    grid-column-start: 2;
+    grid-row: 1;
+   padding: 45px;
+}
+.card-body-title{
+   display: grid;
+   justify-content: center;
+    width: 420px;
+     background-color: rgb(5, 33, 65);
+     color: rgb(255, 255, 255);
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 35px;
+     font-weight: 200;
+}
+.card-footer-social{
+
+    margin: 15px;
+    background: linear-gradient(70deg, rgb(255, 255, 255), rgba(255, 255, 255, 0.356));
+    border-radius: 45px;
+    align-items: center;
+    
+}
+p{
+    margin: 6px;
+}
+.flex{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 15% 25%;
+    grid-template-rows: 10% 30% 30%  ;
+    background-image: url(./assets/Pokedex.png);
+    background-repeat: no-repeat;
+}
+.graph{
+    grid-row-start:2;
+    grid-column: 3;
+   
+}
+.card{
+    width: 100%;
+    height: 100%;
+    grid-row:1;
+
+}
+.Favoritos-items{
+    grid-column-start:5;
+    background: linear-gradient(70deg, rgba(0, 0, 0, 0), rgb(41, 41, 41));
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    text-align: center;
+    margin: 25px;
+    border-radius: 45px;
+}
+.guardar{
+    grid-column-start:3;
+}
