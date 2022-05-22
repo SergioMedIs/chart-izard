@@ -57,8 +57,7 @@ const pintarCard = (pokemon) => {
   flex.appendChild(fragment);
 };
 const stats = [
-  hp = "https://pokeapi.co/api/v2/stat/1/",
-  attack = "https://pokeapi.co/api/v2/stat/2/",
+
 ]
 
 
@@ -69,8 +68,8 @@ const myChart = new Chart(ctx, {
     data: {
         labels: ['PS', 'Ataque', 'Defensa', 'Ataque esp.', 'Defensa esp.', 'velocidad'],
         datasets: [{
-            label: '',
-            data:[2][3],
+            label:[
+            ],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
