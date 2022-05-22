@@ -59,12 +59,7 @@ const pintarCard = (pokemon) => {
 };
 const stats = {
 
-  datasets: [{
-    label: 'My First dataset',
-    backgroundColor: 'rgb(255, 99, 132)',
-    borderColor: 'rgb(255, 99, 132)',
-    data:datasets ,
-  }]
+
 };
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
@@ -73,7 +68,7 @@ const myChart = new Chart(ctx, {
         labels: ['PS', 'Ataque', 'Defensa', 'Ataque esp.', 'Defensa esp.', 'velocidad'],
         datasets: [{
             label: '',
-            data:[ 1, 2],
+            data:[`${hp}` , '1', '2','3','4'],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',

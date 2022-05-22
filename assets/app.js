@@ -48,11 +48,11 @@ const pintarCard = (pokemon) => {
   clone.querySelector(".card-body-text").textContent =
     pokemon.experiencia + " exp";
   clone.querySelectorAll(".card-footer-social h3")[0].textContent =
-    pokemon.ataque + "K";
+    pokemon.ataque + "000";
   clone.querySelectorAll(".card-footer-social h3")[1].textContent =
-    pokemon.especial + "K";
+    pokemon.especial + "000";
   clone.querySelectorAll(".card-footer-social h3")[2].textContent =
-    pokemon.defensa + "K";
+    pokemon.defensa + "000";
 
   fragment.appendChild(clone);
   flex.appendChild(fragment);
@@ -64,9 +64,7 @@ const myChart = new Chart(ctx, {
         labels: ['PS', 'Ataque', 'Defensa', 'Ataque esp.', 'Defensa esp.', 'velocidad'],
         datasets: [{
             label: '-',
-            data: [1,2/* `
-              ${res.hp}
-              ` */],
+            data: [1,2],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',

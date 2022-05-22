@@ -1,4 +1,4 @@
-const inputVal = document.getElementById('card-img').value
+const inputVal = document.getElementById('card-img')
 
 const btnAgregar = document.querySelector('#agregar')
 
