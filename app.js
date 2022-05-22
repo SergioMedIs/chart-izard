@@ -68,7 +68,7 @@ const myChart = new Chart(ctx, {
         labels: ['PS', 'Ataque', 'Defensa', 'Ataque esp.', 'Defensa esp.', 'velocidad'],
         datasets: [{
             label: '',
-            data:[`${hp}` , '1', '2','3','4'],
+            data:[ , '1', '2','3','4'],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
