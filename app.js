@@ -21,7 +21,6 @@ const fetchData = async (id) => {
       imgJuego: data.sprites.front_default,
       imgCvg: data.sprites.other.dream_world.front_default,
       nombre: data.name,
-      experiencia: data.base_experience,
       hp: data.stats[0].base_stat,
       ataque: data.stats[1].base_stat,
       defensa: data.stats[2].base_stat,
@@ -48,19 +47,22 @@ const pintarCard = (pokemon) => {
 
 
   clone.querySelectorAll(".card-footer-social h3")[0].textContent =
-    pokemon.ataque + "K";
+    pokemon.ataque ;
   clone.querySelectorAll(".card-footer-social h3")[1].textContent =
-    pokemon.especial + "K";
+    pokemon.especial ;
   clone.querySelectorAll(".card-footer-social h3")[2].textContent =
-    pokemon.defensa + "K";
+    pokemon.defensa ;
 
   fragment.appendChild(clone);
   flex.appendChild(fragment);
 };
-const stats = {
+const stats = [
+  hp = "https://pokeapi.co/api/v2/stat/1/",
+  attack = "https://pokeapi.co/api/v2/stat/2/",
+]
 
 
-};
+;
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'radar',
@@ -68,7 +70,7 @@ const myChart = new Chart(ctx, {
         labels: ['PS', 'Ataque', 'Defensa', 'Ataque esp.', 'Defensa esp.', 'velocidad'],
         datasets: [{
             label: '',
-            data:[ , '1', '2','3','4'],
+            data:[2][3],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',

@@ -1,11 +1,7 @@
-const inputVal = document.getElementById('card-img')
+const inputVal = document.getElementsByClassName('myChart')
 
 const btnAgregar = document.querySelector('#agregar')
-
-
-console.log(inputVal)
-console.log(btnAgregar)
-
+9
 let arr = [];
 
 btnAgregar.addEventListener('click', () => {
@@ -20,7 +16,7 @@ btnAgregar.addEventListener('click', () => {
 const getCharacterName = async () => {
 
   const input = document.getElementById('personaje').value
-  const url = "https://pokeapi.co/api/v2/pokemon/"
+  const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png`
   const getData = await fetch(url)
 
   const data = await getData.json()
@@ -37,7 +33,7 @@ const renderData = (results) => {
     container.innerHTML += `
       <div>
         <img src="${item.thumbnail.path + '.' + item.thumbnail.extension}" />
-        <p>${item.name}</p>
+        <p>${name}</p>
         <p></p>
       </div>
     `
@@ -54,7 +50,7 @@ function renderElemento() {
   arr.forEach(function (name, i) {
     lista.innerHTML += `
       <li>
-        ${name}
+       
         <button onclick="borrarElemento(${i})" >X</button>
 
       </li>
