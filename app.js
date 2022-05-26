@@ -3,7 +3,7 @@ function getRandomInt(min, max) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const ramdom = getRandomInt(1, 360);
+  const ramdom = getRandomInt(1, 750);
   fetchData(ramdom);
 });
 
@@ -21,7 +21,6 @@ const fetchData = async (id) => {
       imgJuego: data.sprites.front_default,
       imgCvg: data.sprites.other.dream_world.front_default,
       nombre: data.name,
-      hp: data.stats[0].base_stat,
       ataque: data.stats[1].base_stat,
       defensa: data.stats[2].base_stat,
       especial: data.stats[3].base_stat,
@@ -43,33 +42,28 @@ const pintarCard = (pokemon) => {
 
   clone.querySelector(
     ".card-body-title"
-  ).innerHTML = `${pokemon.nombre} ` ;
-
-
+  ).innerHTML = `${pokemon.nombre} `;
+  clone.querySelector(".card-body-text");
   clone.querySelectorAll(".card-footer-social h3")[0].textContent =
-    pokemon.ataque ;
+    pokemon.ataque;
   clone.querySelectorAll(".card-footer-social h3")[1].textContent =
-    pokemon.especial ;
+    pokemon.especial;
   clone.querySelectorAll(".card-footer-social h3")[2].textContent =
-    pokemon.defensa ;
+    pokemon.defensa;
 
   fragment.appendChild(clone);
   flex.appendChild(fragment);
 };
-const stats = [
-
-]
 
 
-;
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'radar',
     data: {
         labels: ['PS', 'Ataque', 'Defensa', 'Ataque esp.', 'Defensa esp.', 'velocidad'],
         datasets: [{
-            label:[
-            ],
+            label: '-',
+            data: [],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -88,6 +82,7 @@ const myChart = new Chart(ctx, {
             ],
             borderWidth: 1
         }]
+      
     },
     options: {
         scales: {
@@ -96,4 +91,5 @@ const myChart = new Chart(ctx, {
             }
         }
     }
+  
 });

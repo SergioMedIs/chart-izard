@@ -135,6 +135,8 @@ p{
     grid-template-rows: 10% 30% 30% 30% 30% ;
     background-image: url(./assets/9fa509702fab91b910e82919b5408993.jpg);
     background-repeat: no-repeat;
+    background-size: auto;
+
 }}
 
 @media screen and (min-width: 200px) and (max-width: 420px)  {
