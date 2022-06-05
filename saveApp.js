@@ -1,7 +1,8 @@
 const inputVal = document.getElementsByClassName('myChart')
 
 const btnAgregar = document.querySelector('#agregar')
-9
+
+
 let arr = [];
 
 /* btnAgregar.addEventListener('click', () => {
@@ -50,7 +51,7 @@ function renderElemento() {
   arr.forEach(function (name, i) {
     lista.innerHTML += `
       <li>
-       
+       Seccion temporarmente fuera de servicio.
         <button onclick="borrarElemento(${i})" >X</button>
 
       </li>

@@ -58,23 +58,45 @@ const pintarCard = (pokemon) => {
   flex.appendChild(fragment);
 };
 
+let arr2 = [];
+function getRandomInt(min, max){
+    return Math.floor(Math.random() * (max + min))
+}
+
+for (let i = 0; i<=5; i++){
+    arr2.push(getRandomInt(45, 100))
+
+}
+
+
 
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'radar',
     data: {
-        labels: ['HP', 'Ataque', 'Defensa', 'Ataque esp.', 'Defensa esp.', 'velocidad'],
+        labels: ['HP' , 'Ataque' , 'Defensa', 'Ataque esp.', 'Defensa esp.', 'velocidad'],
         datasets: [{
          label: 'Stats',
-            data: [1],
+            data: arr2,
+            fill: true,
             backgroundColor: [
                 'rgba(255, 159, 64, 0.2)'
             ],
             borderColor: [
-                'rgba(255, 159, 64, 1)'
+                'rgba(15, 2, 60,34)'
             ],
 
         }]
     },
+    zAxes:[{
+      ticks:{
+        beginAtZero:true
+      }
+    }],
+    yAxes:[{
+      ticks:{
+        beginAtZero:true
+      }
+    }]
 
 });
