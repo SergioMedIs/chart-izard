@@ -212,3 +212,24 @@ p{
             display:none !important;
 
     }}
+    .headd{
+        list-style: none;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: right;
+        margin-right: 15px;
+        padding-right: 15px;
+    }
+    .bar{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: right;
+        margin: 0px;
+        background-color: black;
+        
+    }
+    .headd li{
+        margin-right: 45px;
+    }

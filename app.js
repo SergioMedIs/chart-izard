@@ -21,10 +21,13 @@ const fetchData = async (id) => {
       imgJuego: data.sprites.front_default,
       imgCvg: data.sprites.other.dream_world.front_default,
       nombre: data.name,
+      vida: data.stats[0].base_stat,
       ataque: data.stats[1].base_stat,
       defensa: data.stats[2].base_stat,
       especial: data.stats[3].base_stat,
-    };
+      especialDefensa: data.stats[4].base_stat,
+      velocidad: data.stats[5].base_stat,
+  };
 
     pintarCard(pokemon);
   } catch (error) {
@@ -60,36 +63,18 @@ const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'radar',
     data: {
-        labels: ['PS', 'Ataque', 'Defensa', 'Ataque esp.', 'Defensa esp.', 'velocidad'],
+        labels: ['HP', 'Ataque', 'Defensa', 'Ataque esp.', 'Defensa esp.', 'velocidad'],
         datasets: [{
-            label: '-',
-            data: [],
+         label: 'Stats',
+            data: [1],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
                 'rgba(255, 159, 64, 0.2)'
             ],
             borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
                 'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+
         }]
-      
     },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-  
+
 });

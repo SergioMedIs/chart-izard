@@ -4,13 +4,13 @@ const btnAgregar = document.querySelector('#agregar')
 9
 let arr = [];
 
-btnAgregar.addEventListener('click', () => {
+/* btnAgregar.addEventListener('click', () => {
   arr.push(inputVal.value)
   inputVal.value = ''
   console.log(arr)
   localStorage.setItem('card', arr)
   renderElemento()
-})
+}) */
 
 
 const getCharacterName = async () => {
